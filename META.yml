@@ -25,9 +25,9 @@ requires:
   warnings: '0'
 resources:
   bugtracker: https://rt.cpan.org/Public/Dist/Display.html?Name=Music-Interval-Barycentric
-  homepage: http://search.cpan.org/dist/Music-Interval-Barycentric
-  repository: https://github.com/ology/REPO/tree/master/{{$dist->name}}
-version: '0.01'
+  homepage: https://metacpan.org/release/Music-Interval-Barycentric
+  repository: https://github.com/ology/Music-Interval-Barycentric
+version: '0.0101'
 x_Dist_Zilla:
   perl:
     version: '5.018001'
@@ -202,14 +202,14 @@ x_Dist_Zilla:
       name: PodSyntaxTests
       version: '5.019'
     -
-      class: Dist::Zilla::Plugin::NoTabsTests
+      class: Dist::Zilla::Plugin::Test::NoTabs
       config:
         Dist::Zilla::Plugin::Test::NoTabs:
           finder:
             - ':InstallModules'
             - ':ExecFiles'
             - ':TestFiles'
-      name: NoTabsTests
+      name: Test::NoTabs
       version: '0.08'
     -
       class: Dist::Zilla::Plugin::EOLTests

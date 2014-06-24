@@ -14,7 +14,7 @@ use constant {
     SCALE => 12, # Scale notes
 };
 
-our $VERSION = '0.01';
+our $VERSION = '0.0101';
 
 
 sub barycenter {
@@ -87,7 +87,7 @@ Music::Interval::Barycentric
 
 =head1 VERSION
 
-version 0.01
+version 0.0101
 
 =head1 SYNOPSIS
 
@@ -121,7 +121,10 @@ Interval space distance metric between chords.
 
 =head2 orbit_distance()
 
-TODO
+  $d = orbit_distance($chord1, $chord2);
+
+Return the distance from C<chord1> to the minimum of the cyclic permutations
+for C<chord2>.
 
 =head2 forte_distance()
 

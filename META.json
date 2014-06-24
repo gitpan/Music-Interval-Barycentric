@@ -53,13 +53,13 @@
          "mailto" : "bug-Music-Interval-Barycentric@rt.cpan.org",
          "web" : "https://rt.cpan.org/Public/Dist/Display.html?Name=Music-Interval-Barycentric"
       },
-      "homepage" : "http://search.cpan.org/dist/Music-Interval-Barycentric",
+      "homepage" : "https://metacpan.org/release/Music-Interval-Barycentric",
       "repository" : {
          "type" : "git",
-         "web" : "https://github.com/ology/REPO/tree/master/{{$dist->name}}"
+         "web" : "https://github.com/ology/Music-Interval-Barycentric"
       }
    },
-   "version" : "0.01",
+   "version" : "0.0101",
    "x_Dist_Zilla" : {
       "perl" : {
          "version" : "5.018001"
@@ -281,7 +281,7 @@
             "version" : "5.019"
          },
          {
-            "class" : "Dist::Zilla::Plugin::NoTabsTests",
+            "class" : "Dist::Zilla::Plugin::Test::NoTabs",
             "config" : {
                "Dist::Zilla::Plugin::Test::NoTabs" : {
                   "finder" : [
@@ -291,7 +291,7 @@
                   ]
                }
             },
-            "name" : "NoTabsTests",
+            "name" : "Test::NoTabs",
             "version" : "0.08"
          },
          {
