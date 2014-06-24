@@ -27,7 +27,7 @@ resources:
   bugtracker: https://rt.cpan.org/Public/Dist/Display.html?Name=Music-Interval-Barycentric
   homepage: http://search.cpan.org/dist/Music-Interval-Barycentric
   repository: https://github.com/ology/REPO/tree/master/{{$dist->name}}
-version: 0.01_01
+version: '0.01'
 x_Dist_Zilla:
   perl:
     version: '5.018001'
@@ -103,6 +103,10 @@ x_Dist_Zilla:
       class: Dist::Zilla::Plugin::AutoPrereqs
       name: AutoPrereqs
       version: '5.019'
+    -
+      class: Dist::Zilla::Plugin::CheckChangesHasContent
+      name: CheckChangesHasContent
+      version: '0.006'
     -
       class: Dist::Zilla::Plugin::NextRelease
       name: NextRelease

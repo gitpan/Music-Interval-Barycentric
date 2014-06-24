@@ -14,22 +14,7 @@ use constant {
     SCALE => 12, # Scale notes
 };
 
-our $VERSION = '0.01_01';
-
-
-sub get_chords {
-    my @args = @_;
-    my $size = 0;
-    my @chords = ();
-    for my $chord (@args) {
-        my @chord = split /,/, $chord;
-        die "Chords must be the same size\n" if $size > 0 and $size != @chord;
-        $size = @chord;
-        push @chords, \@chord;
-    }
-    @chords = [qw(3 4 5)] unless @chords; # Major triad default.
-    return @chords;
-}
+our $VERSION = '0.01';
 
 
 sub barycenter {
@@ -102,14 +87,13 @@ Music::Interval::Barycentric
 
 =head1 VERSION
 
-version 0.01_01
+version 0.01
 
 =head1 SYNOPSIS
 
- my @chords = get_chords(@ARGV);
+ print join(', ', barycenter(3)), "\n";
+ @chords = [qw(3 4 5), qw(0 4 7)];
  printf "D: %.3f\n", distance($chords[0], $chords[1]);
- print join(', ',barycenter(3)),"\n";
- print distance(@chords), "\n";
  print evenness_index($chords[0]);
  print orbit_distance(@chords), "\n";
  print forte_distance(@chords), "\n";
@@ -123,12 +107,6 @@ Barycentric chord analysis
 Music::Interval::Barycentric - Barycentric Musical Interval Space
 
 =head1 FUNCTIONS
-
-=head2 get_chords()
-
-Return array references for CSV chords.
-
-* This is a legacy method from fetching commandline arguments.
 
 =head2 barycenter()
 
