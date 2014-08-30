@@ -1,7 +1,7 @@
 Revision history for Music-Interval-Barycentric
 
-0.0101 2014-06-23
-    - Improved POD a bit.
+0.0102 2014-08-30
+    - Improved POD.
 
 0.01  2014-06-23
     - Added actual tests!

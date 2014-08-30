@@ -1,8 +1,8 @@
-
 package Music::Interval::Barycentric;
 BEGIN {
   $Music::Interval::Barycentric::AUTHORITY = 'cpan:GENE';
 }
+# ABSTRACT: Compute barycentric musical interval space
 
 use strict;
 use warnings;
@@ -14,7 +14,7 @@ use constant {
     SCALE => 12, # Scale notes
 };
 
-our $VERSION = '0.0101';
+our $VERSION = '0.0102';
 
 
 sub barycenter {
@@ -83,11 +83,11 @@ __END__
 
 =head1 NAME
 
-Music::Interval::Barycentric
+Music::Interval::Barycentric - Compute barycentric musical interval space
 
 =head1 VERSION
 
-version 0.0101
+version 0.0102
 
 =head1 SYNOPSIS
 
@@ -101,10 +101,6 @@ version 0.0101
 =head1 DESCRIPTION
 
 Barycentric chord analysis
-
-=head1 NAME
-
-Music::Interval::Barycentric - Barycentric Musical Interval Space
 
 =head1 FUNCTIONS
 
